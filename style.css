@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #0046a3;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  overflow: hidden;
+}
+
+.desktop {
+  padding: 10px;
+}
+
+.icon {
+  width: 90px;
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 12px;
+  text-shadow: 1px 1px black;
+}
+
+.emoji {
+  font-size: 35px;
+}
+
+.icon p {
+  margin: 4px 0 0;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  background: #c0c0c0;
+  border-top: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start {
+  height: 28px;
+  margin-left: 4px;
+  font-weight: bold;
+  background: #c0c0c0;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.clock {
+  margin-right: 6px;
+  padding: 5px 10px;
+  background: #c0c0c0;
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  font-size: 13px;
+}
+.window {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 120px;
+  width: 430px;
+  height: 260px;
+  background: #c0c0c0;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 12px;
+}
+
+.window-title {
+  height: 20px;
+  background: navy;
+  color: white;
+  padding: 2px 4px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-title button {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: bold;
+  background: #c0c0c0;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.menu {
+  color: black;
+  background: #c0c0c0;
+  padding: 4px 6px;
+}
+
+.toolbar {
+  display: flex;
+  background: #c0c0c0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid gray;
+  height: 45px;
+}
+
+.tool {
+  width: 65px;
+  text-align: center;
+  color: black;
+  padding-top: 4px;
+  border-right: 1px solid gray;
+  font-size: 11px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: black;
+  background: #c0c0c0;
+  padding: 4px;
+  border-bottom: 1px solid gray;
+}
+
+.address-box {
+  flex: 1;
+  background: white;
+  border: 2px inset gray;
+  padding: 3px;
+}
+
+.files {
+  background: white;
+  color: black;
+  height: 125px;
+  display: flex;
+  gap: 25px;
+  padding: 18px;
+  text-align: center;
+  border-top: 1px solid white;
+}
+
+.file-icon {
+  width: 55px;
+}
+
+.status-bar {
+  display: flex;
+  color: black;
+  background: #c0c0c0;
+  border-top: 1px solid gray;
+  height: 20px;
+  font-size: 11px;
+}
+
+.status-left,
+.status-right {
+  border: 1px inset white;
+  padding: 3px;
+}
+
+.status-left {
+  width: 270px;
+}
+
+.status-right {
+  flex: 1;
+}
