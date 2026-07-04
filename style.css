@@ -1,9 +1,18 @@
+@font-face {
+    font-family: "Pixel Operator";
+    src: url("fonts/PixelOperator.ttf") format("truetype");
+}
+
 body {
-  margin: 0;
-  height: 100vh;
-  background: #0046a3;
-  font-family: "MS Sans Serif", Arial, sans-serif;
-  overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    background: #0046a3;
+    font-family: "Pixel Operator", sans-serif;
+    overflow: hidden;
+}
+
+html, body, .desktop, .icon, .window, button {
+    cursor: url("cursor/arrow-icon.png") 0 0, default;
 }
 
 .desktop {
@@ -11,20 +20,31 @@ body {
 }
 
 .icon {
-  width: 90px;
+  width: 120px;
   text-align: center;
   color: white;
   margin-bottom: 25px;
-  font-size: 12px;
+  font-size: 20px;
   text-shadow: 1px 1px black;
 }
 
+.desktop-icon {
+    width: 80px;
+    height: 80px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    display: block;
+    margin: 0 auto;
+}
 .emoji {
   font-size: 35px;
 }
 
 .icon p {
-  margin: 4px 0 0;
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.1;
 }
 
 .taskbar {
