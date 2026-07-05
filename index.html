@@ -6,65 +6,90 @@
 </head>
 <body>
 
-  <div class="desktop">
-    <div class="icon">
-       <img src="icons/computer-icon.png" class="desktop-icon" alt="My Computer">
-      <p>My Computer</p>
+  <!-- Intro Video -->
+  <div id="intro">
+    <video id="introVideo" autoplay muted playsinline>
+      <source src="intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Desktop -->
+  <div id="website">
+    <div class="desktop">
+
+      <div class="icon">
+        <img src="icons/computer-icon.png" class="desktop-icon" alt="My Computer">
+        <p>My Computer</p>
+      </div>
+
+      <div class="icon" onclick="openDocuments()">
+        <img src="icons/documents.png" class="desktop-icon" alt="My Documents">
+        <p>My Documents</p>
+      </div>
+
+      <div class="icon">
+        <img src="icons/n-of-1-icon.png" class="desktop-icon" alt="N of 1">
+        <p>N of 1</p>
+      </div>
+
+      <div class="icon">
+        <img src="icons/recycle.png" class="desktop-icon" alt="Recycle Bin">
+        <p>Recycle Bin</p>
+      </div>
+
     </div>
 
-    <div class="icon" onclick="openDocuments()">
-      <img src="icons/documents.png" class="desktop-icon" alt="My Documents">
-      <p>My Documents</p>
+    <!-- Documents Window -->
+    <div id="documentsWindow" class="window">
+      <div class="window-title">
+        <span>📁 My Documents</span>
+        <button onclick="closeDocuments()">X</button>
+      </div>
+
+      <div class="menu">File &nbsp; Edit &nbsp; View &nbsp; Help</div>
+
+      <div class="toolbar">
+        <div class="tool">⬅️<br>Back</div>
+        <div class="tool">➡️<br>Forward</div>
+        <div class="tool">⬆️<br>Up</div>
+        <div class="tool">✂️<br>Cut</div>
+        <div class="tool">📄<br>Copy</div>
+        <div class="tool">📋<br>Paste</div>
+      </div>
+
+      <div class="address">
+        <span>Address</span>
+        <div class="address-box">C:\My Documents</div>
+      </div>
+
+      <div class="files">
+        <div class="file-icon">📁<br>Music</div>
+        <div class="file-icon">📁<br>Videos</div>
+        <div class="file-icon">📁<br>Photos</div>
+        <div class="file-icon">📁<br>Secret</div>
+        <div class="file-icon">📄<br>No1.doc</div>
+      </div>
+
+      <div class="status-bar">
+        <div class="status-left">5 items</div>
+        <div class="status-left">Documentation</div>
+      </div>
     </div>
 
-    <div class="icon">
-      <img src="icons/n-of-1-icon.png" class="desktop-icon" alt="N of 1">
-      <p>N of 1</p>
-    </div>
-
-    <div class="icon">
-      <img src="icons/recycle.png" class="desktop-icon" alt="N of 1">
-      <p>Recycle Bin</p>
-    </div>
   </div>
-
-<div id="documentsWindow" class="window">
-  <div class="window-title">
-    <span>📁 My Documents</span>
-    <button onclick="closeDocuments()">X</button>
-  </div>
-
-  <div class="menu">File &nbsp; Edit &nbsp; View &nbsp; Help</div>
-
-  <div class="toolbar">
-    <div class="tool">⬅️<br>Back</div>
-    <div class="tool">➡️<br>Forward</div>
-    <div class="tool">⬆️<br>Up</div>
-    <div class="tool">✂️<br>Cut</div>
-    <div class="tool">📄<br>Copy</div>
-    <div class="tool">📋<br>Paste</div>
-  </div>
-
-  <div class="address">
-    <span>Address</span>
-    <div class="address-box">C:\My Documents</div>
-  </div>
-
-  <div class="files">
-    <div class="file-icon">📁<br>Music</div>
-    <div class="file-icon">📁<br>Videos</div>
-    <div class="file-icon">📁<br>Photos</div>
-    <div class="file-icon">📁<br>Secret</div>
-    <div class="file-icon">📄<br>No1.doc</div>
-  </div>
-
-  <div class="status-bar">
-    <div class="status-left">5 items</div>
-    <div class= "status-left">Documentation</div>
-  </div>
-</div>
 
   <script>
+    const intro = document.getElementById("intro");
+    const video = document.getElementById("introVideo");
+    const website = document.getElementById("website");
+
+    // Show the desktop after the intro finishes
+    video.addEventListener("ended", function () {
+      intro.style.display = "none";
+      website.style.display = "block";
+    });
+
     function openDocuments() {
       document.getElementById("documentsWindow").style.display = "block";
     }
@@ -73,6 +98,19 @@
       document.getElementById("documentsWindow").style.display = "none";
     }
   </script>
+<div class="taskbar">
 
+    <button class="start-button">
+        <span class="start-icon"></span>
+        <span>Start</span>
+    </button>
+
+    <div class="taskbar-spacer"></div>
+
+    <div class="clock" id="clock">
+        12:00 PM
+    </div>
+
+</div>
 </body>
 </html>

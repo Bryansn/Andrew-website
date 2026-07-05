@@ -2,7 +2,24 @@
     font-family: "Pixel Operator";
     src: url("fonts/PixelOperator.ttf") format("truetype");
 }
+/* Intro Screen */
+#intro {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 9999;
+}
 
+#introVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hide website until intro finishes */
+#website {
+    display: none;
+}
 body {
     margin: 0;
     height: 100vh;
@@ -47,19 +64,6 @@ html, body, .desktop, .icon, .window, button {
     line-height: 1.1;
 }
 
-.taskbar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 34px;
-  background: #c0c0c0;
-  border-top: 2px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .start {
   height: 28px;
   margin-left: 4px;
@@ -71,16 +75,7 @@ html, body, .desktop, .icon, .window, button {
   border-bottom: 2px solid black;
 }
 
-.clock {
-  margin-right: 6px;
-  padding: 5px 10px;
-  background: #c0c0c0;
-  border-top: 2px solid gray;
-  border-left: 2px solid gray;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
-  font-size: 13px;
-}
+
 .window {
   display: none;
   position: absolute;
@@ -197,4 +192,82 @@ html, body, .desktop, .icon, .window, button {
 
 .status-right {
   flex: 1;
+}
+/* ===========================
+   Windows 95 Taskbar
+=========================== */
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 42px;
+    background: #c0c0c0;
+
+    display: flex;
+    align-items: center;
+
+    border-top: 2px solid white;
+
+    z-index: 999;
+}
+
+.start-button {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-left: 4px;
+    padding: 4px 12px;
+
+    font-family: "Pixel Operator";
+    font-size: 22px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+
+    cursor: pointer;
+}
+
+.start-button:active {
+
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.start-icon {
+
+    width: 18px;
+    height: 18px;
+
+    /* Blank placeholder */
+    background: transparent;
+}
+
+.taskbar-spacer {
+
+    flex: 1;
+}
+
+.clock {
+
+    margin-right: 6px;
+
+    padding: 4px 12px;
+
+    background: #c0c0c0;
+
+    border: 2px inset #808080;
+
+    font-size: 20px;
+
+    color: black;
 }
