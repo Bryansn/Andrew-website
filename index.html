@@ -28,7 +28,7 @@
         <p>My Documents</p>
       </div>
 
-      <div class="icon">
+      <div class="icon" onclick="openMusicWindow()">
         <img src="icons/n-of-1-icon.png" class="desktop-icon" alt="N of 1">
         <p>N of 1</p>
       </div>
@@ -79,6 +79,21 @@
 
   </div>
 
+<div id="musicWindow" class="music-window">
+
+    <div class="window-title">
+        <span>💿 N of 1</span>
+        <button onclick="closeMusicWindow()">X</button>
+    </div>
+
+    <div class="music-screen">
+        <video class="disk-animation" autoplay muted loop playsinline>
+          <source src="animations/disk-animation.mp4" type="video/mp4">
+          this browser does not support this video
+        </video>
+    </div>
+    </div>
+
   <script>
     const intro = document.getElementById("intro");
     const video = document.getElementById("introVideo");
@@ -97,6 +112,14 @@
     function closeDocuments() {
       document.getElementById("documentsWindow").style.display = "none";
     }
+    function openMusicWindow() {
+    document.getElementById("musicWindow").style.display = "block";
+    }
+
+    function closeMusicWindow() {
+    document.getElementById("musicWindow").style.display = "none";
+    }
+
   </script>
 <div class="taskbar">
 
@@ -104,7 +127,7 @@
         <img src="character1.png">
         <span>Start</span>
     </button>
-w
+
     <div class="taskbar-spacer"></div>
 
     <div class="clock" id="clock">

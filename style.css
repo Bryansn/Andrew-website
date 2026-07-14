@@ -29,7 +29,7 @@ body {
     overflow: hidden;
 }
 
-html, body, .desktop, .icon, .window, button {
+html, body, .desktop, .icon, .window, .music-window, button {
     cursor: url("cursor/arrow-icon.png") 0 0, default;
 }
 
@@ -271,4 +271,70 @@ html, body, .desktop, .icon, .window, button {
     font-size: 20px;
 
     color: black;
+}
+
+/* ===========================
+   N of 1 Music Window
+=========================== */
+
+.music-window {
+    display: none;
+    position: fixed;
+
+    top: 70px;
+    left: 170px;
+
+    width: 750px;
+    height: 500px;
+
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 100px);
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    box-sizing: border-box;
+    z-index: 1000;
+
+    font-family: "Pixel Operator", sans-serif;
+}
+
+.music-window .window-title {
+    width: 100%;
+    height: 24px;
+    box-sizing: border-box;
+}
+
+.music-screen {
+    width: 100%;
+    height: calc(100% - 24px);
+
+    background: black;
+
+    box-sizing: border-box;
+}
+.music-screen {
+    width: 100%;
+    height: calc(100% - 24px);
+    background: black;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 30px;
+    overflow: hidden;
+}
+
+.disk-animation {
+    width: 45%;
+    max-width: 340px;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
