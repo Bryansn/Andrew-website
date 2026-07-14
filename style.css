@@ -277,18 +277,20 @@ html, body, .desktop, .icon, .window, .music-window, button {
    N of 1 Music Window
 =========================== */
 
+/* N of 1 popup */
 .music-window {
     display: none;
     position: fixed;
 
-    top: 70px;
-    left: 170px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    width: 750px;
-    height: 500px;
+    width: 850px;
+    height: 520px;
 
     max-width: calc(100vw - 40px);
-    max-height: calc(100vh - 100px);
+    max-height: calc(100vh - 90px);
 
     background: #c0c0c0;
 
@@ -299,8 +301,7 @@ html, body, .desktop, .icon, .window, .music-window, button {
 
     box-sizing: border-box;
     z-index: 1000;
-
-    font-family: "Pixel Operator", sans-serif;
+    overflow: hidden;
 }
 
 .music-window .window-title {
@@ -313,28 +314,20 @@ html, body, .desktop, .icon, .window, .music-window, button {
     width: 100%;
     height: calc(100% - 24px);
 
-    background: black;
-
-    box-sizing: border-box;
-}
-.music-screen {
-    width: 100%;
-    height: calc(100% - 24px);
-    background: black;
-    box-sizing: border-box;
-
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 
-    padding: 30px;
+    background: black;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .disk-animation {
-    width: 45%;
-    max-width: 340px;
-    height: auto;
     display: block;
+    width: 46%;
+    max-width: 370px;
+    height: auto;
+    max-height: 90%;
     object-fit: contain;
 }
